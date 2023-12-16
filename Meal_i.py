@@ -6,7 +6,16 @@ from streamlit_lottie import st_lottie
 import datetime
 col1, col2, col3 =st.columns(3)
 
-
+##Removal logo
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+##
 st.title("TGYYMP Meal Planner")
 
 def load_lottieurl(url: str):
